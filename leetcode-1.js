@@ -3,16 +3,14 @@ const twoSumsWithMap = (arr, target) => {
 
   for (let i = 0; i < arr.length; i++) {
     const numberToFind = target - arr[i]
-    if (!memory.has(numberToFind)) {
-      return memory.set(numberToFind, i)
+    if (memory.has(arr[i])) {
+      return [memory.get(arr[i]), i]
     }
-    return [memory.get(numberToFind), i]
+    memory.set(numberToFind, i)
   }
-
-  return null
 }
 
-let res = twoSumsWithMap([1, 2, 4, 6, 7], 9)
+let res = twoSumsWithMap([1, 2, 4, 6, 7], 3)
 console.log({ res })
 
 // asdadasdas
