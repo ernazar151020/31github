@@ -1,6 +1,5 @@
 const twoSumsWithMap = (arr, target) => {
   const memory = new Map()
-
   for (let i = 0; i < arr.length; i++) {
     const numberToFind = target - arr[i]
     if (memory.has(arr[i])) {
@@ -12,8 +11,6 @@ const twoSumsWithMap = (arr, target) => {
 
 let res = twoSumsWithMap([1, 2, 4, 6, 7], 3)
 console.log({ res })
-
-// asdadasdas
 
 const twoSumsWithObj = (arr, target) => {
   const memory = {}
