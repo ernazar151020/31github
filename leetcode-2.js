@@ -9,7 +9,7 @@ const getMaxWaterContainer = heights => {
   return maxArea
 }
 
-let res = getMaxWaterContainer([7, 1, 2, 3])
+let res = getMaxWaterContainer([4, 8, 1, 2, 3, 9, 10])
 
 console.log(res)
 
@@ -19,15 +19,18 @@ const getMaxAreaOptilamSol = heights => {
   let maxArea = 0
 
   while (right > left) {
-    const area = Math.min(heights[left], heights[right]) * (right - left)
+    let area = Math.min(heights[right], heights[left]) * (right - left)
+    if (right < left) {
+      right--
+    } else {
+      left++
+    }
     maxArea = Math.max(maxArea, area)
-    left++
-    right--
   }
 
   return maxArea
 }
 
-let res2 = getMaxAreaOptilamSol([7, 1, 2, 3])
+let res2 = getMaxAreaOptilamSol([4, 8, 1, 2, 3, 9, 10])
 
 console.log(res2)
