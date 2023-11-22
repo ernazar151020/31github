@@ -20,7 +20,7 @@ const getMaxAreaOptilamSol = heights => {
 
   while (right > left) {
     let area = Math.min(heights[right], heights[left]) * (right - left)
-    if (right < left) {
+    if (heights[right] < heights[left]) {
       right--
     } else {
       left++
