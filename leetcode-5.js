@@ -5,7 +5,6 @@ const longestSubstr = str => {
 
   for (let left = 0; left < str.length; left++) {
     for (let right = left; right < str.length; right++) {
-      console.log({ left, right })
       if (!memory.get(str[right])) {
         memory.set(str[right], true)
         currentLength++
@@ -16,7 +15,6 @@ const longestSubstr = str => {
     }
   }
   return longest
-  console.log(memory)
 }
 
 const res = longestSubstr('abcbdca')
