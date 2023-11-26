@@ -1,7 +1,29 @@
-// If i remove one letter from string and it becomes a polindrome so i should retuen true , otherwise false
+const validPalindrome = function (s) {
+  let start = 0
+  let end = s.length - 1
+  while (start < end) {
+    if (s[start] !== s[end]) {
+      return (
+        validSubPalindrome(s, start + 1, end) ||
+        validSubPalindrome(s, start, end - 1)
+      )
+    }
+    start++
+    end--
+  }
+  return true
+}
 
-const isAlmostPolindrome = str => {}
+const validSubPalindrome = function (s, start, end) {
+  while (start < end) {
+    if (s[start] !== s[end]) {
+      return false
+    }
+    start++
+    end--
+  }
+  return true
+}
 
-const res = isAlmostPolindrome('abccdba')
-
+const res = validPalindrome('asdf')
 console.log({ res })
