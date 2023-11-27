@@ -7,6 +7,6 @@ const reverseLinkedList = head => {
     prev = current
     current = next
   }
-
+  console.log('')
   return prev
 }
