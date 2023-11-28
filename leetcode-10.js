@@ -19,4 +19,5 @@ const flattenLinkedList = head => {
       currentNode.child = null
     }
   }
+  return head
 }
