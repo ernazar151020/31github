@@ -10,6 +10,12 @@ const flattenLinkedList = head => {
       while (tail.next !== null) {
         tail = tail.next
       }
+      tail.next = currentNode.next
+      if (tail.next !== null) {
+        tail.next.prev = tail
+      }
+      currentNode.next = currentNode.child
+      currentNode.next.prev = currentNode
     }
   }
 }
