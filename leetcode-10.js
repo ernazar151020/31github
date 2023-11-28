@@ -16,6 +16,7 @@ const flattenLinkedList = head => {
       }
       currentNode.next = currentNode.child
       currentNode.next.prev = currentNode
+      currentNode.child = null
     }
   }
 }
