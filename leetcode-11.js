@@ -36,5 +36,7 @@ const hareTortise = head => {
     p2 = p2.next
   }
 
+  console.log({ p1, p2 })
+
   return p1
 }
