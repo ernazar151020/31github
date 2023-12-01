@@ -16,6 +16,8 @@ const validBrackets = str => {
       if (str[i] !== correctBracket) return false
     }
   }
+
+  return memory.length === 0
 }
 
 const res = validBrackets('{()}')
