@@ -28,5 +28,13 @@ function tailFactorial (x, totalSoFar = 1) {
   }
 }
 
+// Explanation
+// tailFactorial(4)
+// tailFactorial(4,1)
+// tailFactorial(3,4)
+// tailFactorial(2,12)
+// tailFactorial(1,24)
+// tailFactorial(0,24)
+
 const res2 = tailFactorial(5)
 console.log({ res2 })
