@@ -16,3 +16,17 @@ function recFuctorial (x) {
 const res = recFuctorial(5)
 
 console.log({ res })
+
+// Tail recursion
+
+function tailFactorial (x, totalSoFar = 1) {
+  if (x === 0) {
+    return totalSoFar
+  } else {
+    console.log({ totalSoFar })
+    return tailFactorial(x - 1, totalSoFar * x)
+  }
+}
+
+const res2 = tailFactorial(5)
+console.log({ res2 })
