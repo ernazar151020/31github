@@ -28,6 +28,7 @@ function tailFactorial (x, totalSoFar = 1) {
   }
 }
 
+// But in some languages tail recursion is not supported . Keep in mind that
 // Explanation
 // tailFactorial(4)
 // tailFactorial(4,1)
