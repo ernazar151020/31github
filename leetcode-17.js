@@ -39,7 +39,7 @@ const swap = (array, first, second) => {
 
 const getKthLargets = (array, k) => {
   const indexToFind = array.length - k
-  quickSelect(array, 0, array.length - 1)
+  quickSelect(array, 0, array.length - 1, indexToFind)
   return array[indexToFind]
 }
 
