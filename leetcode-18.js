@@ -1,9 +1,13 @@
 // Binary Search
 // Binary Search is only for sorted arrays
-// Time complexity of Binary search is O(1)
+// Time complexity of Binary search is O(logn)
 
-const binarySearch = () => {}
+const binarySearch = (array, target) => {
+  const middle = array[array.length / 2]
 
-const res = binarySearch()
+  console.log({ middle })
+}
 
-console.log(binarySearch())
+const res = binarySearch([1, 2, 3, 4, 5, 6, 7, 8], 8)
+
+console.log(res)
