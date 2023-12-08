@@ -20,6 +20,11 @@ const binarySearch = (array, start, end, target) => {
 
 const searchRange = (nums, target) => {
   if (nums.length === 0) return [-1, -1]
+
+  const firstPosition = binarySearch(nums, 0, nums.length - 1, target)
+
+  if (firstPosition === -1) return [-1, -1]
+  
 }
 
 const res = searchRange([1, 1, 2, 3, 4, 5, 5, 5, 6, 6], 5)
