@@ -3,13 +3,9 @@
 
 // [1,1,1,2,2,3,4,5,5,5,6,7]  => target=5 , [7,9] 5 тин башталганы жана аягын табабыз
 
-const binarySearch = (array, target) => {
-  let start = 0
-  let end = array.length - 1
-
-  const middle = Math.floor((start + end) / 2)
-
+const binarySearch = (array, start, end, target) => {
   while (start <= end) {
+    const middle = Math.floor((start + end) / 2)
     let foundValue = array[middle]
     if (foundValue === target) {
       return middle
@@ -22,7 +18,9 @@ const binarySearch = (array, target) => {
   return -1
 }
 
-const searchRange = (nums, target) => {}
+const searchRange = (nums, target) => {
+  if (nums.length === 0) return [-1, -1]
+}
 
 const res = searchRange([1, 1, 2, 3, 4, 5, 5, 5, 6, 6], 5)
 
