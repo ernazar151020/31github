@@ -24,7 +24,21 @@ const searchRange = (nums, target) => {
   const firstPosition = binarySearch(nums, 0, nums.length - 1, target)
 
   if (firstPosition === -1) return [-1, -1]
-  
+  let startPosition = firstPosition
+  let endPosition = firstPosition
+  let temp1
+  let temp2
+  if (startPosition !== -1) {
+    temp1 = startPosition
+    startPosition = binarySearch(nums, 0, startPosition - 1, target)
+  }
+  startPosition = temp1
+  while (endPosition !== -1) {
+    temp2 = endPosition
+    endPosition = binarySearch(nums, endPosition + 1, nums.length - 1, target)
+  }
+  endPosition = temp2
+  return [startPosition, endPosition]
 }
 
 const res = searchRange([1, 1, 2, 3, 4, 5, 5, 5, 6, 6], 5)
