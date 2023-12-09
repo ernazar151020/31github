@@ -10,11 +10,13 @@
 
 // Question : Given a binary tree , find its maximum depth
 
-
-function recursive(node , count){
-	if(node === null){
-		return count
-	}
-	count++
-	return Math.max(recursive(node.left, count) , recursive(node.right , count))
+const maxDepth = (node, currentDepth) => {
+  if (!node) {
+    return currentDepth
+  }
+  currentDepth++
+  return Math.max(
+    maxDepth(node.left, currentDepth),
+    maxDepth(node.right, currentDepth)
+  )
 }
