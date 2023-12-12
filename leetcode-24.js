@@ -1,0 +1,3 @@
+// merge continuously repeted elements
+
+
