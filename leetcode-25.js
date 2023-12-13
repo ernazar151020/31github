@@ -24,4 +24,4 @@ const modifiedString = str => {
 
 const res = compareStrings('abc#', 'ab#')
 
-console.log(res)
+// console.log(res)
