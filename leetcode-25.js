@@ -22,4 +22,6 @@ const modifiedString = str => {
   return memory.join('')
 }
 
-const res = compareStrings('abc#', 'ab')
+const res = compareStrings('abc#', 'ab#')
+
+console.log(res)
