@@ -32,8 +32,8 @@ const findGreatestSumIndexes = nums => {
     let sum = current + next
 
     if (sum > greatest) {
-      console.log('Sum is greater')
-      indexes.push(nums[i], nums[i + 1])
+      indexes[0] = i
+      indexes[1] = i + 1
     }
     if (next) {
       greatest = Math.max(greatest, sum)
