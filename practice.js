@@ -7,8 +7,11 @@ const greatestSum = nums => {
   for (let i = 0; i < nums.length; i++) {
     let current = nums[i]
     let next = nums[i + 1]
-    let sum = nums[current] + nums[next]
-    greatest = Math.max(greatest, sum)
+    let sum = current + next
+    if (next) {
+      greatest = Math.max(greatest, sum)
+      console.log({ current, next, sum })
+    }
   }
 
   return greatest
@@ -17,3 +20,5 @@ const greatestSum = nums => {
 const res = greatestSum([1, 3, 7, 9, 2, 4])
 
 console.log({ res })
+
+// 1.Find the indexes
