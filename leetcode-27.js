@@ -20,3 +20,5 @@ const longestSubstring = str => {
 const res = longestSubstring('abcddaacc')
 
 console.log({ res })
+
+// OPTIMIZED SOLUTION WITH SLIDING WINDOW TECHNIQUE
