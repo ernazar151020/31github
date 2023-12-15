@@ -4,8 +4,9 @@ const longestSubstring = str => {
     const seenChars = {}
     let currentCount = 0
     for (let right = left; right < str.length; right++) {
+      console.log({ seenChars })
       if (!seenChars[str[right]]) {
-        seenChars[str[right]]
+        seenChars[str[right]] = true
         currentCount++
         longest = Math.max(longest, currentCount)
       } else {
@@ -13,6 +14,7 @@ const longestSubstring = str => {
       }
     }
   }
+  return longest
 }
 
 const res = longestSubstring('abcddaacc')
