@@ -22,3 +22,23 @@ const res = greatestSum([1, 3, 7, 9, 2, 4])
 console.log({ res })
 
 // 1.Find the indexes
+
+const findGreatestSumIndexes = nums => {
+  const indexes = []
+  let greatest = 0
+  for (let i = 0; i < nums.length; i++) {
+    let current = nums[i]
+    let next = nums[i + 1]
+    let sum = current + next
+    greatest = Math.max(greatest, sum)
+    if (sum > greatest) {
+      indexes.push(nums[i], nums[i + 1])
+    } else {
+      index = []
+    }
+  }
+}
+
+const res2 = findGreatestSumIndexes([1, 3, 7, 9, 2, 4])
+
+console.log({ res2 })
