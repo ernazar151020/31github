@@ -17,9 +17,9 @@ const greatestSum = nums => {
   return greatest
 }
 
-const res = greatestSum([1, 3, 7, 9, 2, 4])
+// const res = greatestSum([1, 3, 7, 9, 2, 4])
 
-console.log({ res })
+// console.log({ res })
 
 // 1.Find the indexes
 
@@ -30,13 +30,17 @@ const findGreatestSumIndexes = nums => {
     let current = nums[i]
     let next = nums[i + 1]
     let sum = current + next
-    greatest = Math.max(greatest, sum)
+
     if (sum > greatest) {
+      console.log('Sum is greater')
       indexes.push(nums[i], nums[i + 1])
-    } else {
-      index = []
+    }
+    if (next) {
+      greatest = Math.max(greatest, sum)
     }
   }
+
+  return { greatest, indexes }
 }
 
 const res2 = findGreatestSumIndexes([1, 3, 7, 9, 2, 4])
