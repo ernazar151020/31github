@@ -21,6 +21,6 @@ const optimizedLongestSubstring = str => {
   return longest
 }
 
-const res = optimizedLongestSubstring('abccabb')
+const res = optimizedLongestSubstring('abcfcabb')
 
 console.log(res)
