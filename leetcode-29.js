@@ -11,6 +11,9 @@ const aPolindrome = str => {
   //   return false
   //   SECOND STEP
 
+  let transform = str.replace(/[A-Za-z0-9]/, '')
+  console.log({ transform })
+
   let left = 0
   let right = str.length - 1
   while (left < right) {
@@ -24,5 +27,6 @@ const aPolindrome = str => {
 }
 
 const res = aPolindrome('ererere')
+const res2 = aPolindrome('A man , a plan , a canal:Panama')
 
 console.log(res)
