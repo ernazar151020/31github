@@ -3,11 +3,24 @@
 
 // 1
 const aPolindrome = str => {
-  const toArr = str.split('').reverse().join('')
-  if (toArr === str) {
-    return true
+  // FIRST STEP
+  //   const toArr = str.split('').reverse().join('')
+  //   if (toArr === str) {
+  //     return true
+  //   }
+  //   return false
+  //   SECOND STEP
+
+  let left = 0
+  let right = str.length - 1
+  while (left < right) {
+    left++
+    right--
+    if (str[left] === str[right]) {
+      return true
+    }
+    return false
   }
-  return false
 }
 
 const res = aPolindrome('ererere')
