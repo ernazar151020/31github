@@ -18,13 +18,14 @@ const aPolindrome = str => {
   let left = 0
   let right = transformed.length - 1
   while (left < right) {
+    if (transformed[left] !== transformed[right]) {
+      return false
+    }
+
     left++
     right--
-    if (transformed[left] === transformed[right]) {
-      return true
-    }
-    return false
   }
+  return true
 }
 
 const res = aPolindrome('ererere')
