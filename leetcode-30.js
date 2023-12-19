@@ -32,6 +32,7 @@ const isAlmostPolindrome = str => {
     left++
     right--
   }
+  return true
 }
 
 const res = isAlmostPolindrome('race a car')
