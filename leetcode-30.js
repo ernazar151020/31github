@@ -24,7 +24,10 @@ const isAlmostPolindrome = str => {
   let right = transformStr.length - 1
   while (left < right) {
     if (transformStr[left] !== transformStr[right]) {
-      validPolindrome(transform, left, right)
+      return (
+        validPolindrome(transformStr, left + 1, right) ||
+        validPolindrome(transformStr, left, right - 1)
+      )
     }
     left++
     right--
@@ -34,4 +37,4 @@ const isAlmostPolindrome = str => {
 const res = isAlmostPolindrome('race a car')
 const res2 = validPolindrome('racecar')
 
-console.log({ res2 })
+console.log({ res })
