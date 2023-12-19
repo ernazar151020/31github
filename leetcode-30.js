@@ -1,1 +1,1 @@
-// 
+// Almost polindrome
