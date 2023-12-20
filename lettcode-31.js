@@ -5,6 +5,7 @@
 const buyChoco = (prices, money) => {
   let sum = 0
   for (let i = 0; i < prices.length; i++) {
+    console.log({ i, price:prices[i] , sum   })
     const currentSum = prices[i] + prices[i + 1]
     if (currentSum < money) {
       if (sum === 0) {
@@ -24,7 +25,8 @@ const buyChoco = (prices, money) => {
   console.log({ sum })
 }
 
-const res = buyChoco([1, 2, 2], 3)
-const res2 = buyChoco([98, 54, 6, 34, 66, 63, 52, 39], 62) // 22 Output
+// const res = buyChoco([1, 2, 2], 3)
+// const res2 = buyChoco([98, 54, 6, 34, 66, 63, 52, 39], 62) // 22 Output
+const res3 = buyChoco([69, 91, 78, 19, 40, 13], 94) // 62 Output
 
-console.log({ res, res2 })
+console.log({  res3 })
