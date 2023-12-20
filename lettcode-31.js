@@ -15,6 +15,12 @@ const buyChoco = (prices, money) => {
     }
   }
 
+  if (sum > money) {
+    return money
+  } else {
+    return money - sum
+  }
+
   console.log({ sum })
 }
 
