@@ -5,13 +5,14 @@
 const buyChoco = (prices, money) => {
   let sum = 0
   for (let i = 0; i < prices.length; i++) {
-    console.log({ i, price:prices[i] , sum   })
-    const currentSum = prices[i] + prices[i + 1]
-    if (currentSum < money) {
-      if (sum === 0) {
-        sum = currentSum
-      } else {
-        sum = Math.min(sum, currentSum)
+    for (let j = i + 1; j < prices.length; j++) {
+      const currentSum = prices[i] + prices[j]
+      if (currentSum <= money) {
+        if (sum === 0) {
+          sum = currentSum
+        } else {
+          sum = Math.min(sum, currentSum)
+        }
       }
     }
   }
@@ -29,4 +30,4 @@ const buyChoco = (prices, money) => {
 // const res2 = buyChoco([98, 54, 6, 34, 66, 63, 52, 39], 62) // 22 Output
 const res3 = buyChoco([69, 91, 78, 19, 40, 13], 94) // 62 Output
 
-console.log({  res3 })
+console.log({ res3 })
