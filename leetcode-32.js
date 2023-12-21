@@ -5,7 +5,10 @@
 
 const isPalindrome = str => {
   const toString = str.toString()
-  const reversed = toString.split('').reverse()
+
+  console.log(typeof toString)
+  const reversed = toString.split('').reverse().join('')
+  console.log(reversed)
   if (toString === reversed) {
     return true
   }
