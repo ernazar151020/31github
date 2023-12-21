@@ -22,8 +22,11 @@ const buyChoco = (prices, money) => {
   } else {
     return money - sum
   }
+}
 
-  console.log({ sum })
+const buyChocoOptimized = (prices, money) => {
+  
+
 }
 
 // const res = buyChoco([1, 2, 2], 3)
